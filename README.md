@@ -12,12 +12,14 @@ To run:
 # Measurements
 
 Key:
-xcb = X11 w/ OpenGL ES
-eglfs = Full screen OpenGL ES (no X11)
-linuxfb = Full screen software rendered
-See http://doc.qt.io/qt-5/embedded-linux.html
+* xcb = X11 w/ OpenGL ES
+* eglfs = Full screen OpenGL ES (no X11)
+* linuxfb = Full screen software rendered
+* noalpha = No alpha blending of rectangles
 
-noalpha = No alpha blending of rectangles
+See http://doc.qt.io/qt-5/embedded-linux.html for more information on xcb,
+eglfs, and linuxfb.
+
 
 | Platform   | Commandline                             | Redraw time |
 |------------|-----------------------------------------|-------------|
