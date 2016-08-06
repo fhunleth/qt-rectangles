@@ -7,7 +7,7 @@ class RectangleWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit RectangleWidget(QWidget *parent = 0);
+    RectangleWidget(bool withAlpha, QWidget *parent = 0);
 
 protected:
     void paintEvent(QPaintEvent *);
@@ -16,6 +16,7 @@ protected:
 
 private:
     QFont font_;
+    bool withAlpha_;
 };
 
 #endif // RECTANGLEWIDGET_H

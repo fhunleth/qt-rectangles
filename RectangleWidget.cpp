@@ -4,9 +4,11 @@
 #include <QElapsedTimer>
 #include <QApplication>
 
-RectangleWidget::RectangleWidget(QWidget *parent) : QWidget(parent)
+RectangleWidget::RectangleWidget(bool withAlpha, QWidget *parent)
+    : QWidget(parent)
+    , font_("DejaVu Sans Mono", 16)
+    , withAlpha_(withAlpha)
 {
-    font_ = QFont("DejaVu Sans Mono", 16);
     startTimer(500);
 }
 
@@ -21,12 +23,15 @@ void RectangleWidget::paintEvent(QPaintEvent *)
     int rw = 16;
     int rh = 16;
     int gray = 0;
+
+    p.fillRect(0, 0, w, h, Qt::blue);
+
     for (int y = 0; y < h; y += rh) {
         for (int x = 0; x < w; x += rw) {
-            p.fillRect(x, y, rw, rh, QColor(gray, gray, gray));
-            gray += 4;
+            p.fillRect(x, y, rw, rh, QColor(gray, gray, gray, withAlpha_ ? gray : 255));
+            gray += 3;
             if (gray >= 256)
-                gray = 0;
+                gray -= 256;
         }
     }
 
