@@ -31,12 +31,17 @@ untar it on the Raspberry Pi.
 
 2. Copy [qmake.conf](assets/qmake.conf) to `$QT/mkspecs/linux-g++`
 
-3. Run `./configure  -eglfs -no-xcb -no-xcb-xlib -no-nis -opensource -confirm-license -no-qml-debug -no-linuxfb -no-gif -opengl es2 -no-pch`
+3. Uninstall any X11 dev libraries. They seemed to confuse Qt's `./configure`
+   script and since I didn't want them to link in anyway, I removed them. This
+   was a manual process of running `apt list --installed | grep -- -dev`,
+   looking for the X11 ones and then uninstalling them.
+
+4. Run `./configure  -eglfs -no-xcb -no-xcb-xlib -no-nis -opensource -confirm-license -no-qml-debug -no-linuxfb -no-gif -opengl es2 -no-pch`
    (See log at bottom)
 
-4. Run `make`
+5. Run `make`
 
-5. Come back tomorrow
+6. Come back tomorrow
 
 ## Running
 
