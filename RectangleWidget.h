@@ -7,7 +7,7 @@ class RectangleWidget : public QWidget
 {
     Q_OBJECT
 public:
-    RectangleWidget(bool withAlpha, QWidget *parent = 0);
+    RectangleWidget(int side, bool withAlpha, QWidget *parent = 0);
 
 protected:
     void paintEvent(QPaintEvent *);
@@ -17,6 +17,7 @@ protected:
 private:
     QFont font_;
     bool withAlpha_;
+    int side_; // yes, the rectangles became squares...
 };
 
 #endif // RECTANGLEWIDGET_H
