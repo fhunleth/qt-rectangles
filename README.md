@@ -54,7 +54,7 @@ argument will result in an error. I.e., do this:
 
 To get an xcb version of Qt5 quickly, run `sudo apt-get install qt5-default`
 
-## Qt's ./configure log
+## Qt's ./configure log for enabling eglfs
 
 ```
 $ ./configure  -eglfs -no-xcb -no-xcb-xlib -no-nis -opensource -confirm-license
