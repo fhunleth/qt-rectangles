@@ -11,6 +11,14 @@ To run:
 
 # Measurements
 
+Key:
+xcb = X11 w/ OpenGL ES
+eglfs = Full screen OpenGL ES (no X11)
+linuxfb = Full screen software rendered
+See http://doc.qt.io/qt-5/embedded-linux.html
+
+noalpha = No alpha blending of rectangles
+
 | Platform   | Commandline                             | Redraw time |
 |------------|-----------------------------------------|-------------|
 | Pi 3       | ./qt-rectangles -platform xcb           | 29 ms       |
@@ -18,8 +26,10 @@ To run:
 | Pi 3       | ./qt-rectangles -platform xcb noalpha   | 18 ms       |
 | Pi 3       | ./qt-rectangles -platform eglfs noalpha | 23 ms       |
 | Pi Model B | ./qt-rectangles -platform xcb           | 96 ms       |
+| Pi Model B | ./qt-rectangles -platform linuxfb       | 94 ms       |
 | Pi Model B | ./qt-rectangles -platform eglfs         | 422 ms      |
 | Pi Model B | ./qt-rectangles -platform xcb noalpha   | 34 ms       |
+| Pi Model B | ./qt-rectangles -platform linuxfb noalpha | 36 ms       |
 | Pi Model B | ./qt-rectangles -platform eglfs noalpha | 65 ms       |
 
 # Notes to self
