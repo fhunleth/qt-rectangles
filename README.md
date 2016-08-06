@@ -6,6 +6,9 @@ to an image and then uses OpenGL ES to render that to the display. As I found
 out below, using `linuxfb` worked much better since it didn't have to do the OpenGL ES
 step. The `xcb` plugin for X11 also worked fine.
 
+See [Qt's embedded Linux guide](http://doc.qt.io/qt-5/embedded-linux.html) and
+specifically the 2nd paragraph of the EGLFS section.
+
 # qt-rectangles
 
 This is a simple test program to demonstrate performance differences on the
