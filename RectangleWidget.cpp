@@ -21,7 +21,8 @@ void RectangleWidget::paintEvent(QPaintEvent *)
 
     int w = width();
     int h = height();
-    int gray = 0;
+    int gray = 128; // Start at non-zero since if doing only 1 rectangle,
+                    // we don't want it to be completely transparent
 
     p.fillRect(0, 0, w, h, Qt::blue);
 

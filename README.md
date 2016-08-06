@@ -21,6 +21,8 @@ See http://doc.qt.io/qt-5/embedded-linux.html for more information on xcb,
 eglfs, and linuxfb.
 
 
+## 16x16 rectangles (8100 total)
+
 | Platform   | Commandline                             | Redraw time |
 |------------|-----------------------------------------|-------------|
 | Pi 3       | ./qt-rectangles -platform xcb           | 29 ms       |
@@ -35,6 +37,29 @@ eglfs, and linuxfb.
 | Pi Model B | ./qt-rectangles -platform xcb noalpha   | 34 ms       |
 | Pi Model B | ./qt-rectangles -platform linuxfb noalpha | 36 ms     |
 | Pi Model B | ./qt-rectangles -platform eglfs noalpha | 65 ms       |
+
+## 120x120 rectangles (144 total)
+
+| Platform   | Commandline                                  | Redraw time |
+|------------|----------------------------------------------|-------------|
+| Pi 3       | ./qt-rectangles -platform xcb 120            |  ms         |
+| Pi 3       | ./qt-rectangles -platform linuxfb 120        |  15 ms      |
+| Pi 3       | ./qt-rectangles -platform eglfs 120          |  84 ms      |
+| Pi 3       | ./qt-rectangles -platform xcb noalpha 120    |  ms         |
+| Pi 3       | ./qt-rectangles -platform linuxfb noalpha 120 | 8 ms       |
+| Pi 3       | ./qt-rectangles -platform eglfs noalpha 120  |  15 ms      |
+
+## 1920x1080 rectangle (1 total)
+
+| Platform   | Commandline                                   | Redraw time |
+|------------|-----------------------------------------------|-------------|
+| Pi 3       | ./qt-rectangles -platform xcb 1920            |  ms         |
+| Pi 3       | ./qt-rectangles -platform linuxfb 1920        | 26 ms       |
+| Pi 3       | ./qt-rectangles -platform eglfs 1920          | 80 ms       |
+| Pi 3       | ./qt-rectangles -platform xcb noalpha 1920    |  ms         |
+| Pi 3       | ./qt-rectangles -platform linuxfb noalpha 1920 | 6 ms       |
+| Pi 3       | ./qt-rectangles -platform eglfs noalpha 1920  | 14 ms       |
+
 
 # Notes to self
 
