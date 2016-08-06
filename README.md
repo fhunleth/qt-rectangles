@@ -24,7 +24,7 @@ eglfs, and linuxfb.
 | Platform   | Commandline                             | Redraw time |
 |------------|-----------------------------------------|-------------|
 | Pi 3       | ./qt-rectangles -platform xcb           | 29 ms       |
-| Pi 3       | ./qt-rectangles -platform linuxfb       | 29 ms       |
+| Pi 3       | ./qt-rectangles -platform linuxfb       | Oscillates between 29 and 51 ms |
 | Pi 3       | ./qt-rectangles -platform eglfs         | 133 ms      |
 | Pi 3       | ./qt-rectangles -platform xcb noalpha   | 18 ms       |
 | Pi 3       | ./qt-rectangles -platform linuxfb noalpha | 17 ms     |
