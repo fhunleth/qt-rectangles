@@ -1,3 +1,11 @@
+# TL;DR
+
+Do not use `eglfs` with Qt if you're using QWidgets. QWidgets use the software
+renderer (writing this as of Qt 5.6.1). If you use `eglfs`, Qt renders them first
+to an image and then uses OpenGL ES to render that to the display. As I found
+out below, using `linuxfb` worked much better since it didn't have to do the OpenGL ES
+step. The `xcb` plugin for X11 also worked fine.
+
 # qt-rectangles
 
 This is a simple test program to demonstrate performance differences on the
