@@ -37,13 +37,13 @@ eglfs, and linuxfb.
 
 | Platform   | Commandline                             | Redraw time |
 |------------|-----------------------------------------|-------------|
+| Pi 3       | ./qt-rectangles -platform linuxfb noalpha | 17 ms     |
+| Pi 3       | ./qt-rectangles -platform xcb noalpha   | 18 ms       |
+| Pi 3       | ./qt-rectangles -platform eglfs noalpha | 23 ms       |
 | Pi 3       | ./qt-rectangles -platform xcb           | 29 ms       |
 | Pi 3       | ./qt-rectangles -platform linuxfb       | Oscillates between 29 and 51 ms |
 | Pi 3       | ./qt-rectangles -platform eglfs         | 133 ms      |
 | Pi 3       | ./qt-rectangles -platform eglfs gl      | 273 ms      |
-| Pi 3       | ./qt-rectangles -platform xcb noalpha   | 18 ms       |
-| Pi 3       | ./qt-rectangles -platform linuxfb noalpha | 17 ms     |
-| Pi 3       | ./qt-rectangles -platform eglfs noalpha | 23 ms       |
 | Pi Model B | ./qt-rectangles -platform xcb           | 96 ms       |
 | Pi Model B | ./qt-rectangles -platform linuxfb       | 94 ms       |
 | Pi Model B | ./qt-rectangles -platform eglfs         | 422 ms      |
@@ -55,25 +55,25 @@ eglfs, and linuxfb.
 
 | Platform   | Commandline                                  | Redraw time |
 |------------|----------------------------------------------|-------------|
-| Pi 3       | ./qt-rectangles -platform xcb 120            |  29 ms      |
-| Pi 3       | ./qt-rectangles -platform linuxfb 120        |  15 ms      |
-| Pi 3       | ./qt-rectangles -platform eglfs 120          |  84 ms      |
 | Pi 3       | ./qt-rectangles -platform eglfs gl 120       |  1 ms       |
 | Pi 3       | ./qt-rectangles -platform xcb noalpha 120    |  7 ms       |
 | Pi 3       | ./qt-rectangles -platform linuxfb noalpha 120 | 8 ms       |
 | Pi 3       | ./qt-rectangles -platform eglfs noalpha 120  |  15 ms      |
+| Pi 3       | ./qt-rectangles -platform linuxfb 120        |  15 ms      |
+| Pi 3       | ./qt-rectangles -platform xcb 120            |  29 ms      |
+| Pi 3       | ./qt-rectangles -platform eglfs 120          |  84 ms      |
 
 ## 1920x1080 rectangle (1 total)
 
 | Platform   | Commandline                                   | Redraw time |
 |------------|-----------------------------------------------|-------------|
-| Pi 3       | ./qt-rectangles -platform xcb 1920            | 26 ms       |
-| Pi 3       | ./qt-rectangles -platform linuxfb 1920        | 26 ms       |
-| Pi 3       | ./qt-rectangles -platform eglfs 1920          | 80 ms       |
 | Pi 3       | ./qt-rectangles -platform eglfs gl 1920       | 0 ms        |
 | Pi 3       | ./qt-rectangles -platform xcb noalpha 1920    | 6 ms        |
 | Pi 3       | ./qt-rectangles -platform linuxfb noalpha 1920 | 6 ms       |
 | Pi 3       | ./qt-rectangles -platform eglfs noalpha 1920  | 14 ms       |
+| Pi 3       | ./qt-rectangles -platform xcb 1920            | 26 ms       |
+| Pi 3       | ./qt-rectangles -platform linuxfb 1920        | 26 ms       |
+| Pi 3       | ./qt-rectangles -platform eglfs 1920          | 80 ms       |
 
 # Notes to self
 
