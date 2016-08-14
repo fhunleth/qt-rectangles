@@ -13,7 +13,9 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    RectangleWidget.cpp
+    RectangleWidget.cpp \
+    RectangleGLWidget.cpp
 
-HEADERS  += RectangleWidget.h
+HEADERS  += RectangleWidget.h \
+    RectangleGLWidget.h
 
